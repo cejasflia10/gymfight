@@ -1,0 +1,4 @@
+
+body { background-color: #000; color: #fff; font-family: Arial; text-align: center; padding-top: 50px; }
+.logo { background: url('logo.png') no-repeat center; height: 100px; }
+.menu-hidden .menu { display: none; }
