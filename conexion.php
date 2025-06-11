@@ -1,14 +1,13 @@
 <?php
-$host = 'containers-us-west-104.railway.app'; // O el host público que te da Railway
-$puerto = 3306; // o el puerto que figure en MYSQLPORT
-$usuario = 'root'; // o MYSQLUSER
-$contrasena = 'WkZsWUaTRzG1vXNoSPaabFDyrldIZzMj'; // MYSQL_PASSWORD
-$base_datos = 'railway'; // MYSQL_DATABASE
+$host = "mysql.railway.internal";     // MYSQLHOST
+$usuario = "root";                    // MYSQLUSER
+$contraseña = "WkZzSWUaTRzG1vXWoSPaabFDyrlidzMj"; // MYSQLPASSWORD
+$base_de_datos = "railway";           // MYSQLDATABASE
+$puerto = 3306;                       // MYSQLPORT
 
-$conexion = new mysqli($host, $usuario, $contrasena, $base_datos, $puerto);
+$conexion = new mysqli($host, $usuario, $contraseña, $base_de_datos, $puerto);
 
-// Verificar conexión
 if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
+    die("Conexión fallida: " . $conexion->connect_error);
 }
 ?>
