@@ -1,9 +1,10 @@
 FROM php:8.2-apache
 
-# Instalar extensiones necesarias para MySQLi
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+# Instalación de la extensión MySQLi
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-enable mysqli
 
-# Copiar archivos del proyecto
 COPY . /var/www/html/
 
 EXPOSE 80
