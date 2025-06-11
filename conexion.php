@@ -1,10 +1,10 @@
 <?php
 $conexion = new mysqli(
-  "maglev.proxy.rlwy.net", // 🔁 Cambiá por tu host exacto de Railway
-  "root",                                 // Usuario (generalmente es root)
-  "WkzZsWUaTRzGlvXWoSPaabFDyrldIzMj",                  // 🔁 Reemplazá con tu contraseña real
-  "gymfight",                             // Nombre de la base de datos
-  41731                                  // Puerto (por defecto 3306)
+  "maglev.proxy.rlwy.net",             // ✅ HOST correcto (sin NULL)
+  "root",                               // Usuario
+  "WkZsWUaTRzGlvXWoSPaabFDyrlIdzMJ",   // Contraseña (la real de Railway)
+  "railway",                            // Base de datos
+  41731                                 // Puerto real de Railway
 );
 
 if ($conexion->connect_error) {
