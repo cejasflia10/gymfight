@@ -1,15 +1,12 @@
 <?php
-// Variables obtenidas desde Railway
-$host = "mysql-railway.internal"; // MYSQLHOST
-$usuario = "root"; // MYSQLUSER
-$contrasena = "WkzZsWUaTRzGlvXWoSPaabFDyrl dIzMj"; // MYSQLPASSWORD (verificá que no tenga espacios al copiar)
-$base_datos = "railway"; // MYSQLDATABASE
-$puerto = 3306; // MYSQLPORT
+$host = "tu-host-publico.proxy.rlwy.net"; // Reemplazá esto por el host que tiene `.proxy.rlwy.net`
+$usuario = "root"; // O el valor de MYSQLUSER
+$contrasena = "WkzZs...rldIzMj"; // Pegá tu MYSQLPASSWORD completo aquí
+$basedatos = "railway"; // El valor que aparece en MYSQLDATABASE
+$puerto = 41731; // El valor de MYSQLPORT
 
-// Crear conexión
-$conexion = new mysqli($host, $usuario, $contrasena, $base_datos, $puerto);
+$conexion = new mysqli($host, $usuario, $contrasena, $basedatos, $puerto);
 
-// Verificar conexión
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
